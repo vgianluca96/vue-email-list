@@ -5,7 +5,8 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        mailList: []
+        mailList: [],
+        mailListReady: false
       }
     },
     mounted() {
@@ -15,6 +16,9 @@ const { createApp } = Vue
             .then(response => {
                 //console.log(response);
                 this.mailList.push(response.data.response);
+                if (i == 9){
+                    this.mailListReady = true;
+                }
             })
         }
     }
