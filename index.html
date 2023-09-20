@@ -11,8 +11,6 @@
 
     <div id="app">
 
-
-
         <div class="container w-50 py-4">
             
             <div class="card">
@@ -22,7 +20,7 @@
                 </h1>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item" v-if="mailListReady" v-for="mail in mailList">{{mail}} {{mailList.length}}</li>
+                  <li class="list-group-item" v-if="mailListReady" v-for="mail in mailList">{{mail}}</li>
                 </ul>
             </div>
         </div>
